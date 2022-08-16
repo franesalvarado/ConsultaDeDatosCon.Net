@@ -4,7 +4,7 @@ namespace ConsultaDeDatosCon
 {
     public class VentaHandler : DbHandler
     {
-        public List<Venta> GetProductos()
+        public List<Venta> GetVenta()
         {
             List<Venta> Ventas = new List<Venta>();
 
@@ -22,11 +22,7 @@ namespace ConsultaDeDatosCon
                                 Venta Venta = new Venta();
 
                                 Venta.Id = Convert.ToInt32(dataReader["Id"]);
-                                Venta.Nombre = dataReader["Nombre"].ToString();
-                                Venta.Apellido = dataReader["Apellido"].ToString();
-                                Venta.NombreVenta = dataReader["NombreVenta"].ToString();
-                                Venta.Contraseña = dataReader["Contraseña"].ToString();
-                                Venta.Mail = dataReader["Mail"].ToString();
+                                Venta.Comentarios = dataReader["Comentarios"].ToString();
 
                                 Ventas.Add(Venta);
 
